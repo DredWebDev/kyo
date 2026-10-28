@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/* Scrollable Container */
+.info-container {
+    width: 320px;
+    height: 400px; /* Fixed height enables scrolling */
+    overflow-y: auto;
+    background-color: #121316;
+    border: 1px solid #23252c;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+    color: #d1d5db;
+
+    /* Standard W3C Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #2b2e38 #121316;
+}
+
+/* Single Info Box Wrapper */
+.info-box {
+    padding: 24px;
+}
+
+/* Header Title */
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+    position: relative;
+    padding-left: 28px;
+    padding-bottom: 24px;
+}
+
+/* Vertical Line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 14px;
+    bottom: 0;
+    width: 2px;
+    background-color: #2a2e39;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+/* Timeline Node Circle */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #121316;
+    border: 2px solid #3b4252;
+    box-sizing: border-box;
+}
+
+/* Active Node State */
+.timeline-item.active::after {
+    background-color: #d1d5db;
+    border-color: #d1d5db;
+}
+
+/* Content Layout */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+}
+
+.item-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.item-header span {
+    font-size: 0.85rem;
+    color: #7d8590;
+}
+
+.timeline-item p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #9ca3af;
+    margin: 0;
+}
+  </style>
+</head>
+<body><div class="info-container">
+    <div class="info-box">
+        <h2 class="section-title">EXPERIENCE</h2>
+
+        <div class="timeline-item active">
+            <div class="item-header">
+                <h3>Internship</h3>
+                <span>2026</span>
+            </div>
+            <p>Actively seeking</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h3>Capstone UI/UX developer</h3>
+                <span>2026</span>
+            </div>
+            <p>
+                QueueEx: A Computer Vision-Based Smart Queue Management and Predictive Service Delivery System
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h3>Web Developer</h3>
+                <span>2025</span>
+            </div>
+            <p>Developed responsive front-end components and integrated REST APIs.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="item-header">
+                <h3>Projects</h3>
+                <span>2024</span>
+            </div>
+            <p>Built full-stack web applications and portfolio interfaces.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
